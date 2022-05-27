@@ -1,9 +1,9 @@
 from facerecognizer import FaceRecognition
 import os
-
+import time
 
 algo = "knn"
-threshold = 0.2
+threshold = 0.6
 
 """
 
@@ -32,6 +32,8 @@ facerecognition.load_model("models/trained_"+algo+"_model.clf")
 print("Test the trained algorithm")
 images = os.listdir("test_dir")
 for image in images:
+    start = time.time()
     image_path = os.path.join("test_dir",image)
     prediction = facerecognition.predict(image_path, algo = algo ,threshold = threshold)
-    print(prediction)
+    end = time.time()
+    print("Prediction: {} , SPEED: {}".format(prediction,str(end - start)))

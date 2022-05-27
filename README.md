@@ -11,3 +11,7 @@ This repository will be used as playground for studying and testing several type
 
 ## Examples
 **example_facerecognition_*.py** are examples from face_recognition module itself. These files are included here so that you can try them
+
+
+## Installation problems
+- Error for dlib or cmake: [Solution](https://medium.com/analytics-vidhya/how-to-install-dlib-library-for-python-in-windows-10-57348ba1117f)
